@@ -34,7 +34,6 @@ export default {
         },
         methods: {
             add() { //添加标签
-                console.log(this.formItem.content)
                 if (this.formItem.content == '') {
                     this.$Message.error('标签内容不能为空');
                     return false

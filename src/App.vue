@@ -7,7 +7,6 @@
 export default {
     name: 'app',
     mounted() {
-        console.log(3)
         let imgUrl = localStorage.getItem('imgUrl')
         if (imgUrl) {
             var imgSrc = require('./assets/imgs/' + imgUrl + '.jpg')

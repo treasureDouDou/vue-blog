@@ -7,7 +7,7 @@ import app from '../main.js'
 var accessToken = localStorage.getItem('token')
 
 const http = axios.create({
-    baseURL: 'http://localhost:3000/api/api',
+    baseURL: 'http://localhost:3000/api',
     timeout: 8000,
     data: {},
     headers: {

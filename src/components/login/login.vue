@@ -60,7 +60,6 @@ export default {
         methods: {
             ...mapMutations(['isLoginType', 'reLoginType']),
             submit() {
-                console.log(1)
                 if (this.login.name == 'admin' && this.login.password == 123123) {
                     localStorage.setItem('visit', 'admin')
                     localStorage.setItem('visitPassword', '123123')

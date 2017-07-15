@@ -9,7 +9,7 @@
                 <div class="lc-upload">
                     <Input v-model="imgUrl" placeholder="图片路径..." disabled>
                     </Input>
-                    <Upload accept="image/*" :show-upload-list="false" action="http://47.93.190.1:80/api/uploadImg" :on-success="uploadSuccess" :on-progress="uploadProgress" :on-error="uploadErr" name="img">
+                    <Upload accept="image/*" :show-upload-list="false" action="http://localhost:3000/api/uploadImg" :on-success="uploadSuccess" :on-progress="uploadProgress" :on-error="uploadErr" name="img">
                         <Button type="ghost">
                             <Icon type="load-a" size=16 class="spin-icon-load" v-if="isloading"></Icon>
                             <Icon type="ios-cloud-upload-outline" size=16 v-else></Icon>
@@ -91,7 +91,6 @@ export default {
             if (type) { //发布
                 //转换文章详情显示的内容
                 this.formItem.content = this.simplemde.markdown(this.formItem.initContent)
-                console.log(this.formItem.content)
                     //转换首页文章列表显示的简介
                 let reg = /<[^>]+>/g
                 let abstract = this.formItem.content.replace(reg, '').replace(/(^\s+)|(\s+$)|(\s)/g, '').replace(/[\'\"\\\/\b\f\n\r\t]/g, '')

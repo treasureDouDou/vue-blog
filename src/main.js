@@ -26,9 +26,9 @@ if ('addEventListener' in document) {
     }, false);
 }
 //微信QQ浏览上下拉动默认事件取消
-// document.querySelector('body').addEventListener('touchstart', function(e) {
-//     e.preventDefault();
-// });
+document.querySelector('body').addEventListener('touchstart', function(e) {
+    e.preventDefault();
+});
 
 //跳转显示加载中与进度条
 router.beforeEach((to, from, next) => {
