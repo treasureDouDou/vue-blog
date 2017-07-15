@@ -1,0 +1,112 @@
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    color: #cd0200;
+    text-decoration: underline
+}
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word;
+}
+*{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+boyd{
+    font-family: PingHei,PingFang SC,Microsoft Yahei,Helvetica Neue,Helvetica,STHeitiSC-Light,Arial,sans-serif!important;
+}
+/*css为clearfix，清除浮动*/
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.color-w {
+    color: #fff;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
