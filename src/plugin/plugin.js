@@ -21,9 +21,9 @@ const plugin = {
                 hours = date.getHours(),
                 min = date.getMinutes();
             month = (month+1) < 10 ? '0' + (month + 1) : (month + 1);
-            day = day < 10 ? '0' + day.toString() : day;
-            hours = hours < 10 ? '0' + hours.toString() : hours;
-            min = min < 10 ? '0' + min.toString() : min;
+            day = day < 10 ? '0' + day : day;
+            hours = hours < 10 ? '0' + hours : hours;
+            min = min < 10 ? '0' + min : min;
             date = year + '-' + month + '-' + day + ' ' + hours + ':' + min;
             return date
         }
