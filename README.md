@@ -1,13 +1,10 @@
 # vue-blog
-vue+express+mongodb
 
 ## 博客来源
 
 > 由于工作公司原因，上线项目不能演示，自己想要一个属于自己的博客，同时了解一下后端的开发流程，遂用了vue写前台,express+mongodb写后端,花了一个多月的休息时间完成。
 
-> 博客上线地址：[doudoujs.com](http://doudoujs.com),支持手机浏览，自适应。拜访者登录后台地址 [doudoujs.com/login](http://doudoujs.com/login), 欢迎童鞋们查看。
-
-> 有问题的童鞋联系我qq:564526299
+> 博客上线地址：[doudoujs.com](http://doudoujs.com),支持手机浏览，自适应。拜访者登录后台地址 [doudoujs.com/login](http://doudoujs.com/login), 欢迎童鞋们查看。有问题的童鞋联系我qq:564526299
 
 ## 项目结构
 
@@ -17,10 +14,10 @@ vue+express+mongodb
 |----main.js  			//初始化各种配置
 |----router.js  		//路由
 |----assets  			//资源
-|----plugin  		        //一些公共方法
+|----plugin       //一些公共方法
 |----components  		//组件
 |----utils  			//axios——http插件
-|----vuex  		        //状态管理
+|----vuex  				//状态管理
 ```
 
 ## 启动
