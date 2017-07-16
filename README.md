@@ -1,37 +1,37 @@
 # vue-blog
 vue+express+mongodb
 
-## 博客来源
+## 项目介绍
 
-> 由于工作公司原因，上线项目不能演示，自己想要一个属于自己的博客，同时了解一下后端的开发流程，遂用了vue写前台,express+mongodb写后端,花了一个多月的休息时间完成。
-
-> 博客上线地址：[doudoujs.com](http://doudoujs.com),支持手机浏览，自适应。拜访者登录后台地址 [doudoujs.com/login](http://doudoujs.com/login), 欢迎童鞋们查看。
+这是我第一次写后端,一直专注于前端开发,后端的开发流程一直不明白，不清楚。这次写自己的博客用express框架开发后端,总算是了解一些流程了。从开发到结束,mongodb安装,数据库搭建、配置、设计，域名的解析,express的使用,其中遇见的问题,翻墙搜这些问题都能够解决,不算难。这次后端开发虽然不怎么样,但是已经让我对后端开发有一定的了解啦。
 
 > 有问题的童鞋联系我qq:564526299
 
 ## 项目结构
 
 ```
-|-src  					//开发
-|----App.vue  			//背景初始化
-|----main.js  			//初始化各种配置
-|----router.js  		//路由
-|----assets  			//资源
-|----plugin  		        //一些公共方法
-|----components  		//组件
-|----utils  			//axios——http插件
-|----vuex  		        //状态管理
+|-module
+|----api.js  			//api接口
+|----db.js  			//数据库设计，数据库连接
+|-app.js  		//一些配置
+|-public  			//静态资源目录
+|----images  			//上传图片保存目录
+|-index.js  		        //启动配制
 ```
+
+## 配置
+1. mongodb，nodejs安装方法请自行翻墙
+2. 如不想安装mongodb，请翻墙进入mlab.com，新建账号，里面有免费500M的数据库，自己测试够用啦
+3. 进入目录执行npm i，安装模块 ——推荐使用淘宝cnpm
+4. module/db.js 自行设置数据库连接，默认localhost:3000/blog（需下载安装mongodb）
+5. 执行npm start, 启动项目,进程守护用的nodemon
 
 ## 启动
 
 ``` bash
 # install dependencies
-npm install
+npm i
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
+# serve with hot reload at localhost:3000
+npm start
 ```
