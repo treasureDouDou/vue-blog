@@ -6,7 +6,9 @@
 
 > 博客上线地址：[doudoujs.com](http://doudoujs.com),支持手机浏览，自适应。拜访者登录后台地址 [doudoujs.com/login](http://doudoujs.com/login), 欢迎童鞋们查看。有问题的童鞋联系我qq:564526299
 
-## 项目结构
+> 后端项目地址: [https://github.com/treasureDouDou/express-blog](https://github.com/treasureDouDou/express-blog)
+
+## 前端项目结构
 
 ```
 |-src  					//开发
