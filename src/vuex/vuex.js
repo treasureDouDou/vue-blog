@@ -8,6 +8,7 @@ const state = {
     aboutMe: null,
     labels: null,
     loadErr: false,
+    total: 0
 }
 
 const mutations = {
@@ -22,6 +23,9 @@ const mutations = {
     },
     articleListData(state, data){
         state.articleList = data
+    },
+    totalData(state, data){
+        state.total = data
     }
 }
 

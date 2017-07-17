@@ -16,13 +16,12 @@ export default {
     components: {
         singleArticle
     },
-    computed: mapState(['articleList', 'labels']),
+    computed: mapState(['articleList', 'labels','total']),
     data() {
         return {
             showIndex: 1,
             current: 1, //当前页码
             pageSize: 15, //每页条数
-            total: 30,
             showLoad: false,
         }
     },
@@ -38,8 +37,9 @@ export default {
             })
             return false
         } else if (!this.articleList) {
-            this.search(async dataList => {
-                this.articleListData(JSON.parse(JSON.stringify(dataList)))
+            this.search(async data => {
+                this.articleListData(JSON.parse(JSON.stringify(data.list)))
+                this.totalData(data.total)
                 if (!this.labels) {
                     let labels = await this.axios.get('/getLabels')
                     this.lablesData(labels)
@@ -59,7 +59,7 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['articleListData', 'lablesData']),
+        ...mapMutations(['articleListData', 'lablesData','totalData']),
         change(current) {
             this.current = current
             this.search()
@@ -76,12 +76,11 @@ export default {
                     pageSize: this.pageSize
                 }
             })
-            this.total = data.total
             this.$nextTick(() => {
                 this.initScroll()
                 this.loadingClose()
             })
-            cb && cb(data.list)
+            cb && cb(data)
         }
     }
 }
