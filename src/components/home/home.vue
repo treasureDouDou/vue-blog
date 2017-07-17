@@ -78,6 +78,7 @@ export default {
             })
         }
         Vue.prototype.scrollRefresh = () => {
+            if (!this.notpc) return false
             this.$refs.iscroll.refresh()
         }
     },

@@ -205,7 +205,7 @@ export default {
         }
         .reply-box-info {
             flex-direction: column;
-            height: 80px;
+            height: 50px;
             justify-content: space-around;
             align-items: flex-end;
         }
