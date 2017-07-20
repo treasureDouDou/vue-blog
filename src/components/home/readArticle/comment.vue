@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <user-reply ref="maxReplay" maxReplay=true></user-reply>
-        <comment-list></comment-list>
+        <comment-list ref="list"></comment-list>
     </div>
 </template>
 <script>
@@ -18,7 +18,12 @@ export default {
         }
     },
     mounted() {
-
+        this.bus.$on('closeAll',() => {
+            this.$refs.maxReplay.isSaveInfo = false
+            this.$refs.list.$refs.userReply.forEach( item => {
+                item.isSaveInfo = false
+            })
+        })
     }
 };
 </script>

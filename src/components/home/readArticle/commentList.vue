@@ -42,9 +42,6 @@ export default {
                 arr[index].reply = false
             })
             this.list = arr
-            this.$nextTick(() => {
-                this.scrollRefresh()
-            })
         })
     },
     methods: {
@@ -66,7 +63,6 @@ export default {
                     replyId: this.list[this.replyIndex]._id,
                     toUserName: isAdmin ? '管理员-兜兜' : localStorage.getItem('replyName'),
                     content: content,
-                    replyTime: this.getIntactTime(),
                     email: isAdmin ? '管理员' : localStorage.getItem('replyEmail'),
                     isAdmin: isAdmin,
                     state: isAdmin ? true : false //真就是admin自己回复
@@ -79,17 +75,6 @@ export default {
                             this.list[index].reply = false
                         })
                     }
-                    //隐藏其他组件的输入名称和邮箱
-                    this.$parent.$refs.maxReplay.isSaveInfo = false
-                    this.$refs.userReply.forEach(item => {
-                        if (item.isSaveInfo) {
-                            if (item.name && item.email) {
-                                localStorage.setItem('replyName', item.name)
-                                localStorage.setItem('replyEmail', item.email)
-                            }
-                            item.isSaveInfo = false
-                        }
-                    })
                     this.$nextTick(() => {
                             this.scrollRefresh()
                         })

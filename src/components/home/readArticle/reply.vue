@@ -70,6 +70,9 @@ export default {
                 localStorage.setItem('replyEmail', this.email)
                 this.isSaveInfo = false
             }
+
+            //所有回复框关闭
+            this.bus.$emit('closeAll')
             if (!this.maxReplay) { //其他楼层下回复
                 this.$emit('replyCb', this.content)
                 this.content = ''
@@ -166,6 +169,7 @@ export default {
         &.active {
             transform: translateY(50px);
             opacity: 1;
+            height: 80px;
         }
         .reply-box-info-input {
             justify-content: center;
@@ -204,7 +208,7 @@ export default {
         }
         .reply-box-info {
             flex-direction: column;
-            height: 80px;
+            height: 50px;
             justify-content: space-around;
             align-items: flex-end;
         }
