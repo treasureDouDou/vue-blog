@@ -42,6 +42,8 @@ const plugin = {
         }
         vue.prototype.notpc = !flag;
 
+        vue.prototype.bus = new vue()
+
     }
 }
 
