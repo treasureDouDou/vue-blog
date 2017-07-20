@@ -61,7 +61,6 @@ export default {
                 replyId: '',
                 toUserName: isAdmin ? '管理员-兜兜' : this.name,
                 email: isAdmin ? '管理员' : this.email,
-                replyTime: this.getIntactTime(),
                 isAdmin: isAdmin,
                 content: this.content,
                 state: isAdmin ? true : false //真就是admin自己回复
