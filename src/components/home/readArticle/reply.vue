@@ -21,8 +21,8 @@ export default {
     props: ['maxReplay'],
     data() {
         return {
-            name: '',
-            email: '',
+            name: this.getName(),
+            email: this.getEmail(),
             content: '',
             timerCount: 0,
             isSaveInfo: localStorage.getItem('adminName') ? false : (this.getName() && this.getEmail()) ? false : true
@@ -176,7 +176,7 @@ export default {
             label {
                 margin-right: 10px;
                 display: inline-block;
-                max-width: 100%;
+                width: 40px;
                 margin-bottom: 5px;
                 font-size: 16px;
                 font-weight: bold;
@@ -204,7 +204,7 @@ export default {
         }
         .reply-box-info {
             flex-direction: column;
-            height: 50px;
+            height: 80px;
             justify-content: space-around;
             align-items: flex-end;
         }
