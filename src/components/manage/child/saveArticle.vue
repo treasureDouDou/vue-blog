@@ -9,7 +9,7 @@
                 <div class="lc-upload">
                     <Input v-model="imgUrl" placeholder="图片路径..." disabled>
                     </Input>
-                    <Upload accept="image/*" :show-upload-list="false" action="http://localhost:3000/api/uploadImg" :on-success="uploadSuccess" :on-progress="uploadProgress" :on-error="uploadErr" name="img">
+                    <Upload accept="image/*" :show-upload-list="false" action="http://47.93.190.1:80/api/uploadImg" :on-success="uploadSuccess" :on-progress="uploadProgress" :on-error="uploadErr" name="img">
                         <Button type="ghost">
                             <Icon type="load-a" size=16 class="spin-icon-load" v-if="isloading"></Icon>
                             <Icon type="ios-cloud-upload-outline" size=16 v-else></Icon>
