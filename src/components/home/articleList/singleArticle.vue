@@ -155,7 +155,6 @@ export default {
             font-size: 14px;
             .abstract {
                 word-break: break-all;
-                text-indent: 2em;
             }
         }
     }
