@@ -5,7 +5,7 @@
                 <a href="/" class="logo"><img src="../../assets/imgs/doudou.jpg"></a>
                 <div class="wrap">
                     <Button type="ghost" @click="exitDialog = true">注销</Button>
-                    <Button type="ghost"><a href="/">回到首页</a></Button>
+                    <Button type="ghost" @click="$router.push('/')">回到首页</Button>
                 </div>
             </div>
         </div>

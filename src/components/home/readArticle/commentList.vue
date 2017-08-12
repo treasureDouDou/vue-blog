@@ -34,7 +34,8 @@ export default {
     mounted() {
         this.axios.get('/getComment', {
             params: {
-                showView: true
+                showView: true,
+                id: this.$route.query.id
             }
         }).then(data => {
             let arr = data.list

@@ -1,5 +1,5 @@
 <template>
-    <Form :label-width="80">
+    <Form :label-width="80" style="height: 100%;">
         <Form-item label="发布时间">
             <Row>
                 <Col span="7">
@@ -27,7 +27,7 @@
         <Form-item label="文章标题">
             <Input v-model="formItem.title" placeholder="请输入"></Input>
         </Form-item>
-        <Form-item label="文章详情">
+        <Form-item label="文章详情" class="new-article">
             <markdown-editor v-model="formItem.initContent" :configs="configs" ref="markdownEditor"></markdown-editor>
         </Form-item>
         <Form-item style="text-align: center;">
@@ -159,14 +159,27 @@ export default {
 
 }
 </script>
-<style>
+<style lang="less">
 .markdown-editor .CodeMirror,
 .markdown-editor .CodeMirror-scroll {
     min-height: 400px;
     font-size: 16px;
 }
+
+.new-article {
+    height: calc(~"100% - 245px");
+    .ivu-form-item-content,
+    .markdown-editor {
+        height: 100%;
+        .markdown-editor .CodeMirror,
+        .markdown-editor .CodeMirror-scroll {
+            height:calc(~"100% - 70px");
+            font-size: 16px;
+        }
+    }
+}
 </style>
-<style type="text/css" lang="less" scoped>
+<style lang="less" scoped>
 .lc-upload {
     display: flex;
     .ivu-input-type {

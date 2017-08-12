@@ -4,7 +4,7 @@
             <Table :columns="columns" :data="data"></Table>
         </div>
         <div class="page">
-            <Page :total="total" placement="top" show-sizer :page-size="pageSize" :current="current" :page-size-opts="[20, 30]" show-total @on-change="change" @on-page-size-change="sizeChange"></Page>
+            <Page :total="total" placement="top" show-sizer :page-size="pageSize" :current="current" :page-size-opts="[20, 40]" show-total @on-change="change" @on-page-size-change="sizeChange"></Page>
         </div>
         <Modal v-model="dialog" :styles="{top: '300px'}" title="留言详情">
             <p>{{dialogContent}}</p>
