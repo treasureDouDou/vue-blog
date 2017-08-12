@@ -54,16 +54,19 @@ body {
     transition: 1s;
 }
 
-.read-article pre code {
-    display: block;
-    max-width: 100%;
-    color: #8492a6;
-    background: #23241f;
-    font: 16px Consolas, Liberation Mono, Menlo, Courier, monospace;
-    border-radius: 5px;
-    line-height: 1.5em;
-    padding: .4rem .6rem;
-    overflow-x: auto;
+.read-article,
+.editor-preview-side {
+    pre code {
+        display: block;
+        max-width: 100%;
+        color: #8492a6;
+        background: #23241f;
+        font: 16px Consolas, Liberation Mono, Menlo, Courier, monospace;
+        border-radius: 5px;
+        line-height: 1.5em;
+        padding: .4rem .6rem;
+        overflow-x: auto;
+    }
 }
 
 
