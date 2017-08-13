@@ -78,7 +78,6 @@ export default {
         color: #808080;
         margin-right: 1em;
         line-height: 65px;
-        white-space: nowrap;
         border-bottom: 1px solid gray;
         &:hover {
             font-style: italic;
