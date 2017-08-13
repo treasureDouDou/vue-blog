@@ -43,6 +43,10 @@ export default {
                 arr[index].reply = false
             })
             this.list = arr
+            this.$nextTick(() => {
+                this.initScroll()
+                this.loadingClose()
+            })
         })
     },
     methods: {

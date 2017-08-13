@@ -84,8 +84,8 @@ export default {
         }
     }
     .tags {
-        max-width: 40em;
-        margin: 2em auto;
+        width: 100%;
+        margin: 1em auto;
         margin-top: 0em;
         text-align: center;
     }
