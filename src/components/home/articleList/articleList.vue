@@ -73,7 +73,8 @@ export default {
             let data = await this.axios.get('/getArticleList', {
                 params: {
                     current: this.current,
-                    pageSize: this.pageSize
+                    pageSize: this.pageSize,
+                    draft: false
                 }
             })
             this.$nextTick(() => {

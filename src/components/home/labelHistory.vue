@@ -2,18 +2,20 @@
     <div :class="['history',{'not-pc-history': notpc}]">
         <h1>{{$route.query.name}}</h1>
         <hr />
-        <Timeline v-if="loadDone">
-            <template v-for="el in list">
-                <Timeline-item color="#555">
-                    <template v-for="item, index in el">
-                        <p class="time" v-if="index == 0">{{item.showDate.substr(0,4)}}</p>
-                        <p class="content">
-                            <router-link :to="{ path: 'readArticle', query: { id: item._id }}">{{item.title}}<span>{{item.showDate.substr(0,10)}}</span></router-link>
-                        </p>
-                    </template>
-                </Timeline-item>
-            </template>
-        </Timeline>
+        <template v-if="loadDone && list[0].length">
+            <Timeline>
+                <template v-for="el in list">
+                    <Timeline-item color="#555">
+                        <template v-for="item, index in el">
+                            <p class="time" v-if="index == 0">{{item.showDate.substr(0,4)}}</p>
+                            <p class="content">
+                                <router-link :to="{ path: 'readArticle', query: { id: item._id }}">{{item.title}}<span>{{item.showDate.substr(0,10)}}</span></router-link>
+                            </p>
+                        </template>
+                    </Timeline-item>
+                </template>
+            </Timeline>
+        </template>
     </div>
 </template>
 <script>
@@ -76,7 +78,7 @@ export default {
     background: #fff;
     min-height: 100%;
     padding: 20px;
-    &.not-pc-history{
+    &.not-pc-history {
         min-height: 500px;
     }
     h1 {

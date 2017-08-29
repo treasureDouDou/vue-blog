@@ -40,6 +40,14 @@ export default {
                     title: '创建时间',
                     key: 'showDate'
                 }, {
+                    title: '是否草稿',
+                    key: 'draft',
+                    render: (h, params) => {
+                        return h('div', [
+                            h('span', params.row.draft ? '是' : '否')
+                        ]);
+                    }
+                }, {
                     title: '操作',
                     width: 150,
                     align: 'center',
@@ -100,7 +108,7 @@ export default {
                     this.delComment = false
                     this.modal_loading = false
                     this.search()
-                },() => {
+                }, () => {
                     this.delComment = false
                     this.modal_loading = false
                 })

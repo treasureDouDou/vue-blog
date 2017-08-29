@@ -95,6 +95,7 @@ export default {
                 let reg = /<[^>]+>/g
                 let abstract = this.formItem.content.replace(reg, '').replace(/(^\s+)|(\s+$)|(\s)/g, '').replace(/[\'\"\\\/\b\f\n\r\t]/g, '')
                 this.formItem.abstract = abstract.substr(0, 200) + '...'
+                this.formItem.draft = false
                 this.axios.post('/saveArticle', this.formItem)
                     .then(res => {
                         this.$Message.success(id ? '修改成功' : '新建成功');
@@ -104,6 +105,7 @@ export default {
                     })
                 this.formItem.abstract = abstract.substr(0, 200) + '...'
             } else { //草稿
+                this.formItem.draft = true
                 this.axios.post('/saveArticle', this.formItem)
                     .then(res => {
                         this.$Message.success(id ? '修改成功' : '新建成功');
@@ -143,7 +145,8 @@ export default {
                 title: '', //标题
                 content: '', //详情
                 initContent: '', //草稿
-                abstract: '' //简介
+                abstract: '', //简介
+                draft: false//是否为草稿
             },
             configs: {
                 status: false, // 禁用底部状态栏
