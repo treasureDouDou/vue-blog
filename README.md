@@ -1,9 +1,5 @@
 # vue-blog
 
-## 博客来源
-
-> 由于工作公司原因，上线项目不能演示，自己想要一个属于自己的博客，同时了解一下后端的开发流程，遂用了vue2全家桶写前台,express+mongodb写后端,花了一个多月的休息时间完成。
-
 > 博客上线地址：[doudoujs.com](http://doudoujs.com),支持手机浏览，自适应。拜访者登录后台地址 [doudoujs.com/login](http://doudoujs.com/login), 欢迎童鞋们查看。有问题的童鞋联系我qq:564526299
 
 > 后端项目地址: [https://github.com/treasureDouDou/express-blog](https://github.com/treasureDouDou/express-blog)
