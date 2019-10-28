@@ -10,5 +10,5 @@ before_install:
 script:
   - npm run build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t doudou/vue-blog:latest .
-  - docker push doudou/vue-blog:latest
+  - docker build -t qq564526299/vue-blog:latest .
+  - docker push qq564526299/vue-blog:latest
