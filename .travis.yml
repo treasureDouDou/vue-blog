@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "12"
+services:
+  - docker
+
+before_install:
+  - npm install
+
+script:
+  - npm run build
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t doudou/vue-blog:latest .
+  - docker push doudou/vue-blog:latest
