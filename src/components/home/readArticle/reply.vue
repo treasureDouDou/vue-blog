@@ -59,7 +59,7 @@ export default {
             let data = {
                 articleId: this.$route.query.id,
                 replyId: '',
-                toUserName: isAdmin ? '管理员-兜兜' : this.name,
+                toUserName: isAdmin ? '管理员-花解语' : this.name,
                 email: isAdmin ? '管理员' : this.email,
                 isAdmin: isAdmin,
                 content: this.content,

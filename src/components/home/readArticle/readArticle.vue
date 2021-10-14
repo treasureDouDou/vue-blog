@@ -3,7 +3,7 @@
         <div class="article-info">
             <h1>{{article.title}}</h1>
             <div class="user">
-                <span data-v-09a5d688="">By:兜兜</span> 日期: {{article.showDate}}
+                <span data-v-09a5d688="">By:花解语</span> 日期: {{article.showDate}}
             </div>
             <div class="show-content" v-html="article.content">
                 {{article.content}}

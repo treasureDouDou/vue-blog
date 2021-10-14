@@ -66,7 +66,7 @@ export default {
                 this.axios.post('/comment', {
                     articleId: this.$route.query.id,
                     replyId: this.list[this.replyIndex]._id,
-                    toUserName: isAdmin ? '管理员-兜兜' : localStorage.getItem('replyName'),
+                    toUserName: isAdmin ? '管理员-花解语' : localStorage.getItem('replyName'),
                     content: content,
                     email: isAdmin ? '管理员' : localStorage.getItem('replyEmail'),
                     isAdmin: isAdmin,

@@ -4,7 +4,7 @@
             <div class="article" @click="readmore(data._id)">
                 <h2 class="header">{{data.title}}</h2>
                 <div class="content">
-                    <p class="user"><span>By:兜兜</span>日期：{{data.showDate}}</p>
+                    <p class="user"><span>By:花解语</span>日期：{{data.showDate}}</p>
                     <div v-html="data.abstract" class="abstract"></div>
                 </div>
                 <div class="more">
